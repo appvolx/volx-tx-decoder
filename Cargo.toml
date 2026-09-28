@@ -1,0 +1,17 @@
+[package]
+name = "volx-tx-decoder"
+version = "1.0.0"
+edition = "2021"
+description = "Local Solana transaction decoder for the VOLX ecosystem (volx.app)"
+license = "MIT"
+repository = "https://github.com/appvolx/volx-tx-decoder"
+
+[[bin]]
+name = "volx-tx-decoder"
+path = "src/main.rs"
+
+[dependencies]
+clap = { version = "4", features = ["derive"] }
+reqwest = { version = "0.12", default-features = false, features = ["blocking", "json", "rustls-tls"] }
+serde = { version = "1", features = ["derive"] }
+serde_json = "1"
